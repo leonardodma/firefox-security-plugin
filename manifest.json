@@ -1,0 +1,30 @@
+{
+  "browser_action": {
+    "browser_style": true,
+    "default_title": "Verify if web page is secure",
+    "default_popup": "popup.html"
+  },
+  "description": "Verify if web page is secure",
+  "manifest_version": 2,
+  "name": "lelecus",
+  "version": "1.0",
+  "icons": {
+    "16": "icons/lelecus.png",
+    "32": "icons/lelecus.png",
+    "64": "icons/lelecus.png"
+  },
+  "permissions": [
+    "cookies",
+    "<all_urls>",
+    "tabs",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lelecus.js"]
+    }
+  ]
+}

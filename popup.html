@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="overall">
+        <h1>Website Overall</h1>
+        <progress id="overall-progress-bar" value="0" max="100"></progress>
+      </div>
+
+      <details>
+        <summary id="cookies-summary">Cookies details</summary>
+        <div class="cookies-div">
+          <h3>Risk score of cookies:</h3>
+          <progress value="0" max="100" id="cookies-status"></progress>
+        </div>
+        <h3>All cookies:</h3>
+        <ul id="cookie-list"></ul>
+      </details>
+
+      <details>
+        <summary id="local-storage-summary">Local Storage details:</summary>
+        <div class="local-storage-div">
+          <h3>Risk score of local storage:</h3>
+          <progress value="0" max="100" id="local-storage-status"></progress>
+        </div>
+        <h3>All data in local storage:</h3>
+        <ul id="local-storage-list"></ul>
+      </details>
+
+      <details>
+        <summary id="session-storage-summary">Session Storage details:</summary>
+        <div class="session-storage-div">
+          <h3>Risk score of session storage:</h3>
+          <progress value="0" max="100" id="session-storage-status"></progress>
+        </div>
+        <h3>All data in session storage:</h3>
+        <ul id="session-storage-list"></ul>
+      </details>
+
+      <details class="fingerprint-details">
+        <summary id="fingertprint-summary">Any Fingerprinting Risk?</summary>
+        <h3 id="fingerprint-id">No</h3>
+      </details>
+
+      <details class="third-party-details">
+        <summary>Third Party Domains:</summary>
+        <h3>All third party domains:</h3>
+        <ul id="third-party-list"></ul>
+      </details>
+    </div>
+    <script src="/scripts/init.js"></script>
+  </body>
+</html>
