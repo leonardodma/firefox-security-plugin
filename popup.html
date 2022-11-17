@@ -9,29 +9,32 @@
     <div class="container">
       <div class="overall">
         <h1>Website Overall</h1>
+        <h3 id="overall-qtd"></h3>
         <progress id="overall-progress-bar" value="0" max="100"></progress>
       </div>
 
       <details>
         <summary id="cookies-summary">Cookies details</summary>
         <div class="cookies-div">
+          <h3 id="cookies-qtd"></h3>
           <h3>Risk score of cookies:</h3>
-          <progress
-            value="0"
-            max="100"
-            id="cookies-progress-bar"
-            data-label="50% Complete"
-          ></progress>
+          <progress value="0" max="100" id="cookies-progress-bar"></progress>
         </div>
-        <h3>All cookies:</h3>
-        <ul id="cookie-list"></ul>
+        <h3>External Cookies:</h3>
+        <ul id="external-cookie-list"></ul>
+        <h3>Internal Cookies</h3>
+        <ul id="internal-cookie-list"></ul>
       </details>
 
       <details>
         <summary id="local-storage-summary">Local Storage details:</summary>
         <div class="local-storage-div">
           <h3>Risk score of local storage:</h3>
-          <progress value="0" max="100" id="local-storage-status"></progress>
+          <progress
+            value="0"
+            max="100"
+            id="local-storage-progress-bar"
+          ></progress>
         </div>
         <h3>All data in local storage:</h3>
         <ul id="local-storage-list"></ul>
@@ -41,24 +44,37 @@
         <summary id="session-storage-summary">Session Storage details:</summary>
         <div class="session-storage-div">
           <h3>Risk score of session storage:</h3>
-          <progress value="0" max="100" id="session-storage-status"></progress>
+          <progress
+            value="0"
+            max="100"
+            id="session-storage-progress-bar"
+          ></progress>
         </div>
         <h3>All data in session storage:</h3>
         <ul id="session-storage-list"></ul>
+      </details>
+
+      <details class="third-party-domains-details">
+        <summary>Third Party Domains:</summary>
+        <h3 id="third-party-domains-qtd"></h3>
+        <h3>Risk score of Third Party Domains:</h3>
+        <progress
+          value="0"
+          max="100"
+          id="third-party-domains-progress-bar"
+        ></progress>
+        <ul id="third-party-domains-list"></ul>
       </details>
 
       <details class="fingerprint-details">
         <summary id="fingertprint-summary">Any Fingerprinting Risk?</summary>
         <h3 id="fingerprint-id">No</h3>
       </details>
-
-      <details class="third-party-details">
-        <summary>Third Party Domains:</summary>
-        <h3>All third party domains:</h3>
-        <ul id="third-party-list"></ul>
-      </details>
     </div>
-    <script src="/scripts/init.js"></script>
     <script src="/scripts/cookies.js"></script>
+    <script src="/scripts/localStorage.js"></script>
+    <script src="/scripts/sessionStorage.js"></script>
+    <script src="/scripts/thirdPartyDomains.js"></script>
+    <script src="/scripts/overall.js"></script>
   </body>
 </html>
