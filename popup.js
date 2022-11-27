@@ -19,10 +19,6 @@ browser.runtime.onMessage.addListener((request, _, sendResponse) => {
     sendResponse({
       data: Object.entries(localStorage),
     });
-  } else if (request.method === "sessionStorage") {
-    sendResponse({
-      data: Object.entries(sessionStorage),
-    });
   } else if (request.method === "thirdPartyDomains") {
     sendResponse({
       data: Object.entries(getExternalLinks()),

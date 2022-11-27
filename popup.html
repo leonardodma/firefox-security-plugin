@@ -40,20 +40,6 @@
         <ul id="local-storage-list"></ul>
       </details>
 
-      <details>
-        <summary id="session-storage-summary">Session Storage details:</summary>
-        <div class="session-storage-div">
-          <h3>Risk score of session storage:</h3>
-          <progress
-            value="0"
-            max="100"
-            id="session-storage-progress-bar"
-          ></progress>
-        </div>
-        <h3>All data in session storage:</h3>
-        <ul id="session-storage-list"></ul>
-      </details>
-
       <details class="third-party-domains-details">
         <summary>Third Party Domains:</summary>
         <h3 id="third-party-domains-qtd"></h3>
@@ -66,15 +52,15 @@
         <ul id="third-party-domains-list"></ul>
       </details>
 
-      <details class="fingerprint-details">
-        <summary id="fingertprint-summary">Any Fingerprinting Risk?</summary>
-        <h3 id="fingerprint-id">No</h3>
+      <details class="https-details">
+        <summary id="https-summary">HTTPS Protected?</summary>
+        <h3 id="https-id"></h3>
       </details>
     </div>
     <script src="/scripts/cookies.js"></script>
     <script src="/scripts/localStorage.js"></script>
-    <script src="/scripts/sessionStorage.js"></script>
     <script src="/scripts/thirdPartyDomains.js"></script>
+    <script src="/scripts/https.js"></script>
     <script src="/scripts/overall.js"></script>
   </body>
 </html>
